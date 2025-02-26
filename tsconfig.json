@@ -12,6 +12,7 @@
     "skipLibCheck": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true,
-    "allowUnreachableCode": false
+    "allowUnreachableCode": false,
+    "strictNullChecks": true
   }
 }

@@ -246,24 +246,63 @@
 
 /////////////////////////////////////
 
-interface User {
+// interface User {
+//   name: string;
+//   email: string;
+//   age: number;
+// }
+
+// type OptionalUser<T> = {
+//   [key in keyof T]?: T[key];
+// };
+
+// type ReadonlyUser<T> = {
+//     readonly [key in keyof T] : [key]
+// }
+
+// const reza: User = {
+//   name: "reza",
+//   email: "reza@gmail.com",
+//   age: 20,
+// };
+
+// const ali: OptionalUser<User> = { age: 12 };
+
+/////////////////////////////////////////////
+
+type User = {
   name: string;
-  email: string;
   age: number;
-}
-
-type OptionalUser<T> = {
-  [key in keyof T]?: T[key];
+  email?: string;
 };
 
-type ReadonlyUser<T> = {
-    readonly [key in keyof T] : [key]
-}
+type RequiredUser = Required<User>;
+type ReadonlyUser = Readonly<User>;
+type PartialUser = Partial<User>;
+type PickUser = Pick<User, "name" | "email">;
+type Test1 = string | number | null | undefined;
+type Test2 = NonNullable<Test1>;
+type ExcludeType = Exclude<Test1, Function | String>;
+type OmitType = Omit<User, "age">;
 
-const reza: User = {
+const ali: User = {
+  name: "ali",
+  age: 21,
+};
+
+const reza: RequiredUser = {
   name: "reza",
-  email: "reza@gmail.com",
-  age: 20,
+  age: 12,
+  email: "reza.com",
 };
 
-const ali: OptionalUser<User> = { age: 12 };
+const mmd: ReadonlyUser = {
+  name: "mmd",
+  age: 13,
+};
+
+const ramin: PartialUser = { name: "ramin" };
+const babk: PickUser = { name: "babak" };
+
+const test1: Test1 = undefined;
+const test2: Test2 = "test2";
