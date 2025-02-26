@@ -214,21 +214,32 @@
 
 /////////////////////////////////
 
-namespace Saipa {
-  export let car = "pride";
-  export class Body {
-    constructor(public name: string, public color: string) {
-      this.name = name;
-      this.color = color;
-    }
+// namespace Saipa {
+//   export let car = "pride";
+//   export class Body {
+//     constructor(public name: string, public color: string) {
+//       this.name = name;
+//       this.color = color;
+//     }
 
-    make() {
-      console.log("car created successfully.");
-    }
-  }
+//     make() {
+//       console.log("car created successfully.");
+//     }
+//   }
+// }
+
+// let carName = Saipa.car;
+
+// let car = new Saipa.Body("pride", "white");
+// console.log(car);
+
+//////////////////////////
+
+function echo<Type>(param: Type): Type {
+  return param;
 }
 
-let carName = Saipa.car;
-
-let car = new Saipa.Body("pride", "white");
-console.log(car);
+const myNumber: number = echo(14);
+// console.log(myNumber);
+const username: string = echo("ali");
+console.log(username);
