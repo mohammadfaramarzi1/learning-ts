@@ -1,5 +1,7 @@
-"use strict";
-const loginFormErrors = {
-    type: "login",
-    name: "login"
+import { isLogin } from "./funcs.js";
+const user = {
+    name: "mmd",
+    age: 20,
+    email: "faramarzi",
 };
+console.log(isLogin(user));

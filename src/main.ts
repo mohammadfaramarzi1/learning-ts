@@ -190,12 +190,24 @@
 
 ///////////////////////////
 
-type Errors = {
-  type: string;
-  [prop: string]: string;
+// type Errors = {
+//   type: string;
+//   [prop: string]: string;
+// };
+
+// const loginFormErrors: Errors = {
+//     type: "login",
+//     name: "login"
+// }
+
+///////////////////////////////
+
+import { isLogin, User } from "./funcs.js";
+
+const user: User = {
+  name: "mmd",
+  age: 20,
+  email: "faramarzi",
 };
 
-const loginFormErrors: Errors = {
-    type: "login",
-    name: "login"
-}
+console.log(isLogin(user));
