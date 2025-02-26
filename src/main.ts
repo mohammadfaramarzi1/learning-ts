@@ -138,5 +138,7 @@ const useCar = (car: Car | Truck) => {
 };
 
 const pride = new Car("Pride", "White", 1403);
+const benz = new Truck("Benz", "Orange", 1400);
 
 useCar(pride);
+useCar(benz);
