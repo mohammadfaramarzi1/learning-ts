@@ -173,6 +173,17 @@
 //   }
 // };
 
-
 //////////////////////////////////
 
+// type Combine = string | number;
+
+// function sumNumbers(num1: number, num2: number): number;
+// function sumNumbers(num1: string, num2: string): string;
+
+// function sumNumbers(num1: Combine, num2: Combine): Combine {
+//   if (typeof num1 === "number" && typeof num2 === "number") {
+//     return num1 + num2;
+//   } else if (typeof num1 === "string" && typeof num2 === "string") {
+//     return num1.toString() + num2.toString();
+//   }
+// }
