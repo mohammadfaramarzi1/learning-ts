@@ -107,38 +107,72 @@
 
 //////////////////////////////
 
-class Car {
-  constructor(public name: string, public color: string, public model: number) {
-    this.name = name;
-    this.color = color;
-    this.model = model;
-  }
+// class Car {
+//   constructor(public name: string, public color: string, public model: number) {
+//     this.name = name;
+//     this.color = color;
+//     this.model = model;
+//   }
 
-  drive(speed: number) {
-    console.log(`${this.name} drives ${speed} km/h`);
-  }
-}
+//   drive(speed: number) {
+//     console.log(`${this.name} drives ${speed} km/h`);
+//   }
+// }
 
-class Truck extends Car {
-  constructor(public name: string, public color: string, public model: number) {
-    super(name, color, model);
-  }
+// class Truck extends Car {
+//   constructor(public name: string, public color: string, public model: number) {
+//     super(name, color, model);
+//   }
 
-  load(weight: string) {
-    console.log(`set ${weight}(kg) load on ${this.name}`);
-  }
-}
+//   load(weight: string) {
+//     console.log(`set ${weight}(kg) load on ${this.name}`);
+//   }
+// }
 
-const useCar = (car: Car | Truck) => {
-  if (car instanceof Truck) {
-    car.load("120");
-  } else if (car instanceof Car) {
-    car.drive(120);
-  }
-};
+// const useCar = (car: Car | Truck) => {
+//   if (car instanceof Truck) {
+//     car.load("120");
+//   } else if (car instanceof Car) {
+//     car.drive(120);
+//   }
+// };
 
-const pride = new Car("Pride", "White", 1403);
-const benz = new Truck("Benz", "Orange", 1400);
+// const pride = new Car("Pride", "White", 1403);
+// const benz = new Truck("Benz", "Orange", 1400);
 
-useCar(pride);
-useCar(benz);
+// useCar(pride);
+// useCar(benz)
+
+//////////////////////////
+
+// type Admin = {
+//   type: "ADMIN";
+//   name: string;
+//   privileges: string[];
+// };
+
+// type Teacher = {
+//   type: "TEACHER";
+//   name: string;
+//   startDate: Date;
+// };
+
+// const showProp = (member: Admin | Teacher) => {
+//   switch (member.type) {
+//     case "ADMIN": {
+//       console.log(member.privileges);
+//       break;
+//     }
+//     case "TEACHER": {
+//       console.log(member.startDate);
+//       break;
+//     }
+//     default: {
+//       throw new Error("Invalid member!");
+//     }
+//   }
+// };
+
+
+//////////////////////////////////
+
