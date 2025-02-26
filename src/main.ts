@@ -270,39 +270,49 @@
 
 /////////////////////////////////////////////
 
-type User = {
-  name: string;
-  age: number;
-  email?: string;
-};
+// type User = {
+//   name: string;
+//   age: number;
+//   email?: string;
+// };
 
-type RequiredUser = Required<User>;
-type ReadonlyUser = Readonly<User>;
-type PartialUser = Partial<User>;
-type PickUser = Pick<User, "name" | "email">;
-type Test1 = string | number | null | undefined;
-type Test2 = NonNullable<Test1>;
-type ExcludeType = Exclude<Test1, Function | String>;
-type OmitType = Omit<User, "age">;
+// type RequiredUser = Required<User>;
+// type ReadonlyUser = Readonly<User>;
+// type PartialUser = Partial<User>;
+// type PickUser = Pick<User, "name" | "email">;
+// type Test1 = string | number | null | undefined;
+// type Test2 = NonNullable<Test1>;
+// type ExcludeType = Exclude<Test1, Function | String>;
+// type OmitType = Omit<User, "age">;
 
-const ali: User = {
-  name: "ali",
-  age: 21,
-};
+// const ali: User = {
+//   name: "ali",
+//   age: 21,
+// };
 
-const reza: RequiredUser = {
-  name: "reza",
-  age: 12,
-  email: "reza.com",
-};
+// const reza: RequiredUser = {
+//   name: "reza",
+//   age: 12,
+//   email: "reza.com",
+// };
 
-const mmd: ReadonlyUser = {
-  name: "mmd",
-  age: 13,
-};
+// const mmd: ReadonlyUser = {
+//   name: "mmd",
+//   age: 13,
+// };
 
-const ramin: PartialUser = { name: "ramin" };
-const babk: PickUser = { name: "babak" };
+// const ramin: PartialUser = { name: "ramin" };
+// const babk: PickUser = { name: "babak" };
 
-const test1: Test1 = undefined;
-const test2: Test2 = "test2";
+// const test1: Test1 = undefined;
+// const test2: Test2 = "test2";
+
+///////////////////////////////////////////
+
+import { power, sumNumbers } from "./funcss.js";
+
+const poweredNumber = power(11);
+console.log(poweredNumber);
+
+const number = sumNumbers(12, 12);
+console.log(number);

@@ -1,7 +1,5 @@
-"use strict";
-const reza = {
-    name: "reza",
-    email: "reza@gmail.com",
-    age: 20,
-};
-const ali = { age: 12 };
+import { power, sumNumbers } from "./funcss.js";
+const poweredNumber = power(11);
+console.log(poweredNumber);
+const number = sumNumbers(12, 12);
+console.log(number);
