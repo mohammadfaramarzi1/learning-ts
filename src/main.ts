@@ -187,3 +187,15 @@
 //     return num1.toString() + num2.toString();
 //   }
 // }
+
+///////////////////////////
+
+type Errors = {
+  type: string;
+  [prop: string]: string;
+};
+
+const loginFormErrors: Errors = {
+    type: "login",
+    name: "login"
+}
