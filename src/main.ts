@@ -202,12 +202,33 @@
 
 ///////////////////////////////
 
-import { isLogin, User } from "./funcs.js";
+// import { isLogin, User } from "./funcs.js";
 
-const user: User = {
-  name: "mmd",
-  age: 20,
-  email: "faramarzi",
-};
+// const user: User = {
+//   name: "mmd",
+//   age: 20,
+//   email: "faramarzi",
+// };
 
-console.log(isLogin(user));
+// console.log(isLogin(user));
+
+/////////////////////////////////
+
+namespace Saipa {
+  export let car = "pride";
+  export class Body {
+    constructor(public name: string, public color: string) {
+      this.name = name;
+      this.color = color;
+    }
+
+    make() {
+      console.log("car created successfully.");
+    }
+  }
+}
+
+let carName = Saipa.car;
+
+let car = new Saipa.Body("pride", "white");
+console.log(car);
