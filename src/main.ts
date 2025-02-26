@@ -235,11 +235,35 @@
 
 //////////////////////////
 
-function echo<Type>(param: Type): Type {
-  return param;
+// function echo<Type>(param: Type): Type {
+//   return param;
+// }
+
+// const myNumber: number = echo(14);
+// // console.log(myNumber);
+// const username: string = echo("ali");
+// console.log(username);
+
+/////////////////////////////////////
+
+interface User {
+  name: string;
+  email: string;
+  age: number;
 }
 
-const myNumber: number = echo(14);
-// console.log(myNumber);
-const username: string = echo("ali");
-console.log(username);
+type OptionalUser<T> = {
+  [key in keyof T]?: T[key];
+};
+
+type ReadonlyUser<T> = {
+    readonly [key in keyof T] : [key]
+}
+
+const reza: User = {
+  name: "reza",
+  email: "reza@gmail.com",
+  age: 20,
+};
+
+const ali: OptionalUser<User> = { age: 12 };

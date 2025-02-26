@@ -1,7 +1,7 @@
 "use strict";
-function echo(param) {
-    return param;
-}
-const myNumber = echo(14);
-const username = echo("ali");
-console.log(username);
+const reza = {
+    name: "reza",
+    email: "reza@gmail.com",
+    age: 20,
+};
+const ali = { age: 12 };
